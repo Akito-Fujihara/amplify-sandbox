@@ -1,16 +1,6 @@
 import { Auth } from 'aws-amplify';
 import { useState, useEffect } from "react"
 
-// Cognitoで作成したユーザー情報
-type User = {
-	id: string,
-	username: string,
-	attributes: {
-		email: string
-		sub: string // いわゆるUID的なもの（一意の識別子）
-	}
-}
-
 export const GetUserInfo = () => {
 	const [jwttoken, setJwtToken] = useState<string>()
 
